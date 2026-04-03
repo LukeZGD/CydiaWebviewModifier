@@ -196,7 +196,7 @@ var cyGetAd = function(catalog) {
             }
 
             if (typeof ad.href == 'undefined')
-                ad.href = 'http://lukezgd.github.io/CydiaWebviewModifier/package/' + ad.dpkg;
+                ad.href = 'https://lukezgd.github.io/CydiaWebviewModifier/package/' + ad.dpkg;
             if (typeof ad.icon == 'undefined')
                 ad.icon = "/icon/" + ad.dpkg + ".png";
         } else if (cyAdVersion < 1)

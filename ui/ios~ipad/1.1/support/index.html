@@ -5,7 +5,7 @@ name+=' ('+installed+')';var regarding=function(type){return encodeURIComponent(
 return href;};var support=null;if(package.getField!=undefined)
 support=package.getField("support");if(support==null)
 support=package.support;if(support!=null&&support.match(/https?:\/\/cydia\.saurik\.com\/(api\/)?support\//)!=null)
-support=null;if(support=="http://lukezgd.github.io/CydiaWebviewModifier/api/support/"+id)
+support=null;if(support=="https://lukezgd.github.io/CydiaWebviewModifier/api/support/"+id)
 support=null;if(support==null)
 $(".support").remove();else{$("#support-href").href(support);$("#support").html($.xml(support));}
 var commercial=package.hasTag('cydia::commercial');if(!commercial)

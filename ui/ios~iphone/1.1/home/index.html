@@ -12,7 +12,7 @@ if(touch){if(typeof cydia.saveConfig!='undefined')
 cydia.saveConfig();}}
 var headers={};var header=function(value,name){if(typeof value!='undefined'&&value!=null&&value.length!=0)
 headers[name]=value;};var mcc=cydia.mcc;var mnc=cydia.mnc;var operator=cydia.operator;var model=cydia.model;var ecid=cydia.ecid;var firmware=cydia.firmware;header(unknown,'X-Cydia-Unknown-Count');header(ecid,'X-Cydia-Ecid');header(mcc,'X-Cydia-Mcc');header(mnc,'X-Cydia-Mnc');header(operator,'X-Cydia-Operator');header(model,'X-Machine');header(cydia.role,'X-Role');if(operator=='T - Mobile')
-operator='T-Mobile';$.xhr('http://lukezgd.github.io/CydiaWebviewModifier/api/home?v=2','POST',headers,null,{'success':function(value){value=eval(value);var message=null;if(typeof value.message!='undefined'){message=value.message;if(message=='')
+operator='T-Mobile';$.xhr('https://lukezgd.github.io/CydiaWebviewModifier/api/home?v=2','POST',headers,null,{'success':function(value){value=eval(value);var message=null;if(typeof value.message!='undefined'){message=value.message;if(message=='')
 message=null;}
 if(message==null)
 $('.message').remove();else{$('.message').removeClass('hidden');$('#message').html(message);}
