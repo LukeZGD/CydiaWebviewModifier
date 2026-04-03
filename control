@@ -6,4 +6,4 @@ Description: Modify URL loaded in Cydia webviews
 Maintainer: LukeZGD
 Author: LukeZGD
 Section: Tweaks
-Depends: mobilesubstrate, preferenceloader
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader

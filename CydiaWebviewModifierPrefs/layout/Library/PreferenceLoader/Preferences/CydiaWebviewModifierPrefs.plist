@@ -15,7 +15,7 @@
 		<key>isController</key>
 		<true/>
 		<key>label</key>
-		<string>CydiaWebviewModifierPrefs</string>
+		<string>Cydia Webview Modifier</string>
 	</dict>
 </dict>
 </plist>

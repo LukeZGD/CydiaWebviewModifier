@@ -17,10 +17,17 @@ static NSString *GetModifiedURL(NSString *original) {
 }
 
 static void preferencesChanged() {
-    NSUserDefaults *const prefs = [[NSUserDefaults alloc] initWithSuiteName:@"com.lukezgd.cydiawebviewmodifierprefs"];
+    NSDictionary *prefs = [[NSUserDefaults standardUserDefaults]
+        persistentDomainForName:@"com.lukezgd.cydiawebviewmodifierprefs"];
 
-    tweakEnabled = [prefs objectForKey:@"tweakEnabled"] ? [prefs boolForKey:@"tweakEnabled"] : YES;
-    customURL = [prefs objectForKey:@"customURL"] ? [prefs stringForKey:@"customURL"] : @"http://cydia.saurik.com";
+    tweakEnabled = [[prefs objectForKey:@"tweakEnabled"] ?: @YES boolValue];
+
+    id value = [prefs objectForKey:@"customURL"];
+    if ([value isKindOfClass:[NSString class]] && [value length] > 0) {
+        customURL = value;
+    } else {
+        customURL = @"http://cydia.saurik.com";
+    }
 }
 
 %ctor {
@@ -32,6 +39,11 @@ static void preferencesChanged() {
 %hook UIWebView
 
 - (void)loadRequest:(NSURLRequest *)request {
+    if (!tweakEnabled) {
+        %orig(request);
+        return;
+    }
+
     NSURL *url = [request URL];
     NSString *urlString = [url absoluteString];
 
