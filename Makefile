@@ -9,3 +9,5 @@ CydiaWebviewModifier_CFLAGS = -fno-objc-arc
 
 include $(THEOS)/makefiles/common.mk
 include $(THEOS_MAKE_PATH)/tweak.mk
+SUBPROJECTS += CydiaWebviewModifierPrefs
+include $(THEOS_MAKE_PATH)/aggregate.mk
