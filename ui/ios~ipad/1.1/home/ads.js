@@ -124,7 +124,7 @@ var cyAdCatalogSaurikIT = { ads: [
 ], check: true, };
 
 var cyAdCatalogCydia = { ads: [
-    //{ href: "http://www.jailbreakcon.com/", name: "JailbreakCon", text: cyAdTextJailbreakCon, icon: "/icon/jailbreakcon.png", },
+    //{ href: "http://www.jailbreakcon.com/", name: "JailbreakCon", text: cyAdTextJailbreakCon, icon: "../../../../icon/jailbreakcon.png", },
     { dpkg: "com.aaronash.barrel", name: "Barrel", text: cyAdTextBarrel, filter: cyAdFilterBarrel, },
     { dpkg: "com.chpwn.zephyr", name: "Zephyr", text: cyAdTextZephyr, filter: cyAdFilterZephyr, },
     //{ dpkg: "cydialer", name: "CyDialer", text: "slide to call your contacts\nright from your lockscreen", filter: cyAdFilterCyDialer, },
@@ -132,12 +132,12 @@ var cyAdCatalogCydia = { ads: [
 ], check: true, };
 
 var cyAdCatalogIntelli = { ads: [
-     //{ dpkg: "com.mywi4", name: "MyWi 8", text: "WiFi hotspot with advanced features\nincluding WiFi sharing and 5 GHz", icon: "/icon/com.intelliborn.mywi6.png", },
-     //{ dpkg: "com.intelliscreenx", name: "IntelliScreenX", text: "Twitter, Facebook, Mail, &\nMessages on lock screen", icon: "/icon/com.intelliborn.intelliscreenx6.png", },
-     //{ dpkg: "com.intelliborn.messagesplus", name: "Messages+", text: "messages quick compose\nreply to texts from any app", icon: "/icon/com.intelliborn.messagesplus6.png", },
+     //{ dpkg: "com.mywi4", name: "MyWi 8", text: "WiFi hotspot with advanced features\nincluding WiFi sharing and 5 GHz", icon: "../../../../icon/com.intelliborn.mywi6.png", },
+     //{ dpkg: "com.intelliscreenx", name: "IntelliScreenX", text: "Twitter, Facebook, Mail, &\nMessages on lock screen", icon: "../../../../icon/com.intelliborn.intelliscreenx6.png", },
+     //{ dpkg: "com.intelliborn.messagesplus", name: "Messages+", text: "messages quick compose\nreply to texts from any app", icon: "../../../../icon/com.intelliborn.messagesplus6.png", },
      //{ dpkg: "com.intelliborn.intelliid", name: "IntelliID", text: "Caller ID for unknown numbers\n(for USA only)", },
      //{ dpkg: "com.my3g", name: "My3G", text: "FaceTime, YouTube & more on 3G\nworks on LTE, easy configuration", },
-    //{ dpkg: "com.mywi4.ondemand", name: "MyWi OnDemand", text: "iPad to iPhone\nInternet sharing", icon: "/icon/com.intelliborn.mywi6.png", },
+    //{ dpkg: "com.mywi4.ondemand", name: "MyWi OnDemand", text: "iPad to iPhone\nInternet sharing", icon: "../../../../icon/com.intelliborn.mywi6.png", },
 ], check: false, use: cyAdUseIntelli, };
 
 
@@ -198,7 +198,7 @@ var cyGetAd = function(catalog) {
             if (typeof ad.href == 'undefined')
                 ad.href = 'https://lukezgd.github.io/CydiaWebviewModifier/package/' + ad.dpkg;
             if (typeof ad.icon == 'undefined')
-                ad.icon = "/icon/" + ad.dpkg + ".png";
+                ad.icon = "../../../../icon/" + ad.dpkg + ".png";
         } else if (cyAdVersion < 1)
             continue;
 
