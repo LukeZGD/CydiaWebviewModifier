@@ -20,7 +20,7 @@ static void preferencesChanged() {
     NSDictionary *prefs = [[NSUserDefaults standardUserDefaults]
         persistentDomainForName:@"com.lukezgd.cydiawebviewmodifierprefs"];
 
-    tweakEnabled = [[prefs objectForKey:@"tweakEnabled"] ?: @YES boolValue];
+    tweakEnabled = [[prefs objectForKey:@"tweakEnabled"] ?: [NSNumber numberWithBool:YES] boolValue];
 
     id value = [prefs objectForKey:@"customURL"];
     if ([value isKindOfClass:[NSString class]] && [value length] > 0) {
